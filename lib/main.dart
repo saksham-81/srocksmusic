@@ -1,10 +1,19 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+import 'package:srocksmusic/home_screen/model/music_service_model.dart';
+import 'package:srocksmusic/home_screen/view/detail_screen.dart';
+import 'package:srocksmusic/home_screen/view/home_screen.dart';
+import 'package:srocksmusic/home_screen/view_model/home_viewmodel.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MainApp());
+  runApp(ChangeNotifierProvider(
+    create: (_) => HomeViewModel(),
+    child: MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
@@ -12,12 +21,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    return ScreenUtilInit(
+        designSize: const Size(360, 800),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_, child) {
+          return MaterialApp(
+            home: const HomeScreen(),
+            debugShowCheckedModeBanner: false,
+          );
+        });
   }
 }
