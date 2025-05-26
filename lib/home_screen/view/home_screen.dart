@@ -349,37 +349,47 @@ Widget _buildServiceCard(BuildContext context, ServiceModel service) {
       child: SizedBox(
         height: 74.sp,
         width: 330.sp,
-        child: Card(
-          color: const Color(0xFF1E1E1E),
-          shape: RoundedRectangleBorder(
+        child: Container(
+          height: 74.sp,
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.sp),
-            side: BorderSide(
-              color: const Color(0xFF2F2F39),
-              width: 1.sp,
+            image: DecorationImage(
+              image: AssetImage(service.bgImg),
+              fit: BoxFit.cover,
             ),
           ),
-          child: ListTile(
-            leading: Image.asset(service.icon, width: 47.sp, height: 47.sp),
-            title: Text(
-              service.title,
-              style: GoogleFonts.syne(
-                  textStyle: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w700,
-                fontSize: 15.sp,
-              )),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.black.withOpacity(0.75),
+              borderRadius: BorderRadius.circular(15.sp),
+              border: Border.all(
+                color: const Color(0xFF2C2D31),
+                width: 1.sp,
+              ),
             ),
-            subtitle: Text(
-              service.description,
-              style: GoogleFonts.syne(
-                  textStyle: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-              )),
+            child: ListTile(
+              leading: Image.asset(service.icon, width: 47.sp, height: 47.sp),
+              title: Text(
+                service.title,
+                style: GoogleFonts.syne(
+                    textStyle: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15.sp,
+                )),
+              ),
+              subtitle: Text(
+                service.description,
+                style: GoogleFonts.syne(
+                    textStyle: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 13.sp,
+                )),
+              ),
+              trailing: Image.asset('assets/home/arrow.png',
+                  width: 6.88.sp, height: 13.75.sp),
             ),
-            trailing: Image.asset('assets/home/arrow.png',
-                width: 6.88.sp, height: 13.75.sp),
           ),
         ),
       ),
