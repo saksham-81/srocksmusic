@@ -74,6 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           SizedBox(
                                             width: 190.sp,
                                             child: TextField(
+                                              autofocus: false,
                                               onTapOutside: (event) {
                                                 FocusScope.of(context)
                                                     .unfocus();
@@ -337,7 +338,10 @@ Widget _buildServiceCard(BuildContext context, ServiceModel service) {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => ServiceDetailsScreen(serviceTitle: service.title),
+            builder: (_) {
+              FocusManager.instance.primaryFocus!.unfocus();
+              return ServiceDetailsScreen(serviceTitle: service.title);
+            },
           ),
         );
       },
