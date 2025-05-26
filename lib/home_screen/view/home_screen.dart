@@ -73,43 +73,38 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                           SizedBox(
                                             width: 190.sp,
-                                            child: Expanded(
-                                              child: TextField(
-                                                onTapOutside: (event) {
-                                                  FocusScope.of(context)
-                                                      .unfocus();
-                                                },
-                                                
-                                                decoration: InputDecoration(
-                                                  hintText:
-                                                      'Search "Punjabi Lyrics"',
-                                                  hintStyle: GoogleFonts.syne(
-                                                    textStyle: TextStyle(
-                                                        color:
-                                                            Color(0xFF61616B),
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontSize: 14.sp),
-                                                  ),
-                                                  contentPadding:
-                                                      EdgeInsets.only(
-                                                    left: 10.sp,
-                                                    top: 1.sp,
-                                                    bottom: 1.sp,
-                                                  ),
-                                                  isDense: true,
-                                                  filled: true,
-                                                  fillColor: Color(0xFF2F2F39),
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            10.sp),
-                                                    borderSide: BorderSide.none,
-                                                  ),
+                                            child: TextField(
+                                              onTapOutside: (event) {
+                                                FocusScope.of(context)
+                                                    .unfocus();
+                                              },
+                                              decoration: InputDecoration(
+                                                hintText:
+                                                    'Search "Punjabi Lyrics"',
+                                                hintStyle: GoogleFonts.syne(
+                                                  textStyle: TextStyle(
+                                                      color: Color(0xFF61616B),
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      fontSize: 14.sp),
                                                 ),
-                                                style: const TextStyle(
-                                                    color: Colors.white),
+                                                contentPadding: EdgeInsets.only(
+                                                  left: 10.sp,
+                                                  top: 1.sp,
+                                                  bottom: 1.sp,
+                                                ),
+                                                isDense: true,
+                                                filled: true,
+                                                fillColor: Color(0xFF2F2F39),
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10.sp),
+                                                  borderSide: BorderSide.none,
+                                                ),
                                               ),
+                                              style: const TextStyle(
+                                                  color: Colors.white),
                                             ),
                                           ),
                                           VerticalDivider(

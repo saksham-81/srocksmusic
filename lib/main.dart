@@ -2,8 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:srocksmusic/home_screen/model/music_service_model.dart';
-import 'package:srocksmusic/home_screen/view/detail_screen.dart';
 import 'package:srocksmusic/home_screen/view/home_screen.dart';
 import 'package:srocksmusic/home_screen/view_model/home_viewmodel.dart';
 
