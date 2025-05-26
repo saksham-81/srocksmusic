@@ -63,14 +63,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                       padding: EdgeInsets.fromLTRB(
                                           12.sp, 11.sp, 12.sp, 11.sp),
                                       child: Row(
-                                        // !textfield
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
-                                          Icon(
-                                            Icons.search,
-                                            color: Colors.white,
-                                            size: 20.sp,
+                                          Image.asset(
+                                            'assets/home/Search.png',
+                                            height: 20.sp,
+                                            width: 20.sp,
                                           ),
                                           SizedBox(
                                             width: 190.sp,
@@ -80,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   FocusScope.of(context)
                                                       .unfocus();
                                                 },
+                                                
                                                 decoration: InputDecoration(
                                                   hintText:
                                                       'Search "Punjabi Lyrics"',

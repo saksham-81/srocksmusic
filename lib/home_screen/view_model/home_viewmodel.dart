@@ -7,7 +7,6 @@ class HomeViewModel extends ChangeNotifier {
   List<ServiceModel> services = [];
   bool isLoading = true;
 
-  // HomeViewModel(this._repository);
   HomeViewModel() {
     fetchServices();
   }
